@@ -12,7 +12,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix='$', intents=intents)
 
-commandsList = ["$board1", "$board2", "$board3", "$board4", "$board5", "$board6", "$board7", "$board8", "$pickmode", "$pickgame", "$pickgc", "$pickgcwii", "$pickn64", "$bstars", "$commands"]
+commandsList = ["$board1", "$board2", "$board3", "$board4", "$board5", "$board6", "$board7", "$board8", "$pickmode", "$pickgame", "$pickgc", "$pickgcwii", "$pickn64", "$bstars", "$duels", "$commands"]
 
 boards5 = {
     1: "Toy Dream",
@@ -499,12 +499,26 @@ async def pickmode(ctx):
 
 @bot.command(name="bstars")
 async def bstars(ctx):
-    randint = random.randint(1,2)
+    randint = random.randint(1,3)
 
     if randint == 1:
+        
+        await ctx.send("## Bonus Stars Will Be... Off")
+    elif randint == 2:
         await ctx.send("## Bonus Stars Will Be... On")
     else:
-        await ctx.send("## Bonus Stars Will Be... Off")
+        await ctx.send("## Bonus Stars Will Be... Ztars")
+
+@bot.command(name="duels")
+async def duels(ctx):
+    randint = random.randint(1,3)
+
+    if randint == 1:
+        await ctx.send("## Same Space Duels is set to... Always")
+    elif randint == 2:
+        await ctx.send("## Same Space Duels is set to... Vanilla")
+    else:
+        await ctx.send("## Same Space Duels is set to... Never")
 
 @bot.command(name="commands")
 async def commands(ctx):
