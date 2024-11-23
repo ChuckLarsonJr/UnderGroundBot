@@ -1,2 +1,2 @@
 # MayhemBot
-Bot for Mayhem: The Next Generation
+Bot for Mario Party Mayhem
