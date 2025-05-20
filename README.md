@@ -1,2 +1,2 @@
-# MayhemBot
-Bot for Mario Party Mayhem
+# UnderGround Bot
+Bot for The UnderGround Grotto
